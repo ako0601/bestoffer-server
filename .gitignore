@@ -12,6 +12,7 @@ database/*.sqlite
 secret/*
 
 #firebase - firestore control
+.firebaserc
 firebase.json
 firestore.indexes.json
 firestore.rules
