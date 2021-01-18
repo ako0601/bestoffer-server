@@ -17,7 +17,7 @@
 - 구성방법
 ```bash
 # 이 저장소 클론하기
-git clone ....
+git clone https://github.com/ako0601/bestoffer-server.git
 
 # 저장소가 클론된 디렉토리로 이동
 cd bestoffer-server
@@ -28,7 +28,7 @@ npm install
 # env, secret 설정
 
 # 개발모드로 실행
-adonis serve --dev
+npm run dev
 ```
 이후 Postman 에서 GET http://localhost:3333 요청 혹은 <br>
 브라우저에서 http://localhost:3333으로 접속
