@@ -23,4 +23,5 @@ Route.get("/", () => {
 Route.group(() => {
   Route.post("add", "NoticeController.create");
   Route.get("/", "NoticeController.list");
+  Route.get("/:id", "NoticeController.detail");
 }).prefix("notices");

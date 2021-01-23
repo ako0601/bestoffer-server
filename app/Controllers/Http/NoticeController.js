@@ -14,6 +14,7 @@ class NoticeController {
     };
 
     const data = request.only(["writer", "title", "used"]);
+    console.log(`create data received ${JSON.stringify(data)}`);
     const validation = await validate(data, rules);
     if (validation.fails()) {
       return response.status(206).json({
@@ -49,7 +50,27 @@ class NoticeController {
         });
       });
     });
-
+    return response.status(201).json({
+      status: true,
+      message: "User created successfully",
+      data: notices,
+    });
+  }
+  async detail({ params, response }) {
+    let notices = [];
+    await noticeReference
+      .doc(params.id)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          let id = doc.id;
+          let notice = doc.data();
+          notices.push({
+            id,
+            ...notice,
+          });
+        }
+      });
     return response.status(201).json({
       status: true,
       message: "User created successfully",
