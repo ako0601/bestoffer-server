@@ -11,7 +11,7 @@
 5. (Mac OS) VMware (도커 설치시)
 6. (Windows) WSL2 + Ubuntu (도커 설치시)
 
-### :bulb: 로컬에서 프론트엔드 개발을 위한 구성
+### :bulb: 로컬에서 백엔드 개발을 위한 구성
 
 - 구성요소: API 서버 (Adonis App)
 - 구성방법
