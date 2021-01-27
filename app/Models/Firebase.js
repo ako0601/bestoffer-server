@@ -8,12 +8,16 @@ const admin = require("firebase-admin");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  storageBucket: "bestoffer-be17a.appspot.com",
 });
 
-class Firestore extends Model {
+class Firebase extends Model {
   db() {
     return admin.firestore();
   }
+  storage() {
+    return admin.storage().bucket();
+  }
 }
 
-module.exports = Firestore;
+module.exports = Firebase;

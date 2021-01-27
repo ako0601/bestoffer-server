@@ -1,9 +1,9 @@
 "use strict";
 
-const Firestore = use("App/Models/Firestore");
+const Firebase = use("App/Models/Firebase");
 const { validate } = use("Validator");
-const firestore = new Firestore();
-const db = firestore.db();
+const Firebase = new Firebase();
+const db = Firebase.db();
 const noticeReference = db.collection("notice");
 
 class NoticeController {
