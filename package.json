@@ -28,9 +28,12 @@
     "@adonisjs/validator": "^5.0.6",
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
+    "firebase": "^8.2.4",
     "firebase-admin": "^9.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "axios-logger": "^2.5.0"
+  },
   "autoload": {
     "App": "./app"
   }

@@ -25,3 +25,8 @@ Route.group(() => {
   Route.get("/", "NoticeController.list");
   Route.get("/:id", "NoticeController.detail");
 }).prefix("notices");
+
+Route.group(() => {
+  Route.post("/add", "GalleryController.create");
+  Route.get("/", "GalleryController.helpTest");
+}).prefix("gallery");
