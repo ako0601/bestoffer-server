@@ -2,8 +2,8 @@
 
 const Firebase = use("App/Models/Firebase");
 const { validate } = use("Validator");
-const Firebase = new Firebase();
-const db = Firebase.db();
+const firebase = new Firebase();
+const db = firebase.db();
 const noticeReference = db.collection("notice");
 
 class NoticeController {
