@@ -16,7 +16,7 @@ module.exports = {
   | Function - Receives the current origin and should return one of the above values.
   |
   */
-  origin: ["http://local-f.bestoffer.com:3000", "localhost:3000"],
+  origin: ["http://local-f.bestoffer.com:3000"],
 
   /*
   |--------------------------------------------------------------------------
