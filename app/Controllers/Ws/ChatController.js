@@ -4,7 +4,7 @@ const Firebase = use("App/Models/Firebase");
 const { validate } = use("Validator");
 const firebase = new Firebase();
 const db = firebase.db();
-const noticeReference = db.collection("notice");
+const chatReference = db.collection("chat");
 const Logger = use("Logger");
 
 class ChatController {
@@ -14,7 +14,10 @@ class ChatController {
   }
 
   async onMessage(message) {
-    Logger.debug("Hello Message");
+    this.socket.emit("result", {
+      result: "message well received",
+    });
+    Logger.debug("message received message " + JSON.stringify(message));
   }
 }
 
